@@ -7,7 +7,7 @@
 // {
 //     return x * x;
 // }
-// int res = Func(5);
+// int res = Func(100);
 // Console.WriteLine(res);
 
 // Вариант 2-------------------------------------------------
@@ -68,10 +68,12 @@
 // }
 // Func(1);
 
-// Console.Write("Введите число от 1 до 7 и нажмите клавишу Enter: ");
-// string DayCount = Console.ReadLine();
 
 // Вариант 2 -------------------------------------------------------------------------------------
+
+
+// Console.Write("Введите число от 1 до 7 и нажмите клавишу Enter: ");
+// string DayCount = Console.ReadLine();
 
 // if (DayCount == "1")
 // {
@@ -104,10 +106,10 @@
 
 //  4. Найти максимальное из трех чисел
 
-// int z = 4;
+// int a = 4;
 // int b = 4;
 // int c = 4;
-// int max = z;
+// int max = a;
 
 // if (b > max) max = b;
 // if (c > max) max = c;
@@ -115,7 +117,15 @@
 // System.Console.WriteLine("max = " + max);
 
 //  5. Написать программу вычисления значения функции y=f(a)
-//  6. =======Выяснить является ли число чётным========
+
+// int y (int a)
+// {
+//     return a*a-5;
+// } 
+// int c = y(6);
+// System.Console.WriteLine(c);
+
+//  6. ============ Выяснить является ли число чётным     ==================
 
 // void Func(int a)
 // {
@@ -131,19 +141,19 @@
 // Func(5);
 
 
-//  7. =======Показать числа от -N до N========
+// //  7. =======Показать числа от -N до N========
 
-// int [] arrayA = new int [10];
+// int [] arrayA = new int [10]; // объявил массив
 
-// void CreateArray(int [] array)
+// void CreateArray(int [] array) // создает массив
 // {
 //     for(int i = 0; i < array.Length; i++)
 //     {
-//         array[i] = new Random().Next(-10, 11);
+//         array[i] = new Random().Next(-100, 100);
 //     }
 // }
 
-// void ShowArray(int [] array)
+// void ShowArray(int [] array) // выводит массив
 // {
 //     for(int ind = 0; ind < array.Length; ind++)
 //     {
@@ -179,7 +189,7 @@
 //     for(int index = 0; index < array.Length; index++)
 //     if(arrayA[index] % 2 == 0)
 //     {
-//         Console.Write($"{arrayA[index]} ");
+//         Console.Write($"{arrayA[index]}  " );
 //     }
 // }
 
@@ -197,7 +207,7 @@
 // {
 //     if (a % 2 == 0)
 //     {
-//         System.Console.WriteLine(a + " ");
+//         System.Console.Write(a + " ");
 //     }
 // }
 
@@ -247,21 +257,42 @@
 
 // int number = CreateNum();
 // Console.WriteLine(number);
-// MaxNum(number);
+// // MaxNum(number);
 
-// 12. ======Удалить вторую цифру трёхзначного числа=========
+// // 12. ====== Удалить вторую цифру трёхзначного числа =========
 
-// void DeleteSecNumber(int arg)
+// int DeleteSecNumber(int arg)
 // {
 //     int a = arg / 100;
 //     int b = arg % 10;
 //     int c = a * 10 + b;
-//     Console.WriteLine(c);
+//     return c;
 // }
 
-// DeleteSecNumber(371);
+// int d = DeleteSecNumber(371);
+// System.Console.WriteLine(d);
 
-// 13. ========Выяснить, кратно ли число заданному, если нет, вывести остаток.=======
+// if (74 == DeleteSecNumber(458))
+// {
+//     System.Console.WriteLine("Верно");
+// }
+// else
+// {
+//     System.Console.WriteLine("Не верно");
+// }
+
+// Вариант 2 ----------------------------------------------------
+
+// int n = 789;
+// int delTwo(int n)
+// {
+//     int num1 = n / 100;
+//     int num3 = n % 10;
+//     return num1 * 10 + num3;
+// }
+// Console.WriteLine(delTwo(n));
+
+// 13. ======== Выяснить, кратно ли число заданному, если нет, вывести остаток. =======
 
 // int CreateNum()
 // {
@@ -288,15 +319,47 @@
 //     Console.WriteLine($"Остаток деления {firstNum} на {secondNum} равен {residual}");
 // }
 
-// 14. Найти третью цифру числа или сообщить, что её нет
+// Вариант 2 -------------------------------------------------------------
+
+// int a = 80;
+// int b = 20;
+// System.Console.WriteLine(a);
+// System.Console.WriteLine(b);
+// int result = a / b;
+// if (a % b ==0)
+// {
+//     System.Console.WriteLine("Кратно");
+// }
+// else
+// {
+//     System.Console.WriteLine("Остаток = " + a % b);
+// }
+
+// 14. Найти третью цифру числа или сообщить, что её нет 
+
+// int a = new Random().Next(10,1000);
+// System.Console.WriteLine(a);
+
+// if (a < 100)
+// {
+//     System.Console.WriteLine("Третьей цифры нет");
+// }
+// else
+// {
+//     int b = a % 10;
+//     System.Console.WriteLine(b);
+// }
+
+
+// Вариант 2 --------------------------------------------------------------------------
 
 // int RandomNum()
 // {
 //     int x = new Random().Next(1, 1000);
 //     return x;
 // }
-
 // int number = RandomNum();
+// System.Console.WriteLine(number);
 
 // void FindThirdNum(int arg)
 // {
@@ -310,7 +373,7 @@
 //         Console.WriteLine("Третьей цифры в числе нет!");
 //     }
 // }
-// FindThirdNum(number);
+// FindThirdNum(number); // ПОЧЕМУ ТАК ???
 
 // Почувствуй себя джуном
 
@@ -328,9 +391,83 @@
 // int ans = Number(160);
 // Console.WriteLine(ans);
 
+//  Вариант 2 ---------------------------------------------------------
+
+// int Number(int num)
+// {
+//     int result = 0;
+//     if (num % 7 == 0 & num % 23 == 0)
+//     {
+//         result = 1;
+//         return result;
+//     }
+//     else
+//     {
+//         return result;
+//     }
+// }
+
+// int ans = Number(161);
+// Console.WriteLine(ans);
+
+//  Варинт 3 -----------------------------------------
+
+// bool Number(int num)
+// {
+//     return (num % 7 == 0 & num % 23 == 0);
+// }
+// System.Console.WriteLine(Number(161));
+
+
 // 16. ======Дано число обозначающее день недели. Выяснить является номер недели выходным днём
 
 
+// Console.Write("Введите число от 1 до 7 и нажмите клавишу Enter: ");
+// int yourDay = int.Parse(Console.ReadLine()); // вводные данные 
+
+// bool dayNum(int num) // выводит тип данных (true or false) + название метода (аргумент) 
+// {
+//     return (num == 6 | num == 7); // возвращает результат аргумента
+// }
+// int a = 1; // просто счетчик
+// while (a > 0)
+// {
+//     if (yourDay >= 1 & yourDay <= 7)
+//     {
+//         System.Console.WriteLine(dayNum(yourDay)); // покажи как ты использовал метод с вводными данными
+//         break;
+//         a++;
+//     }
+//     else
+//     {
+//         System.Console.WriteLine("Вы ввели не корректное число");
+//         Console.Write("Введите число от 1 до 7 и нажмите клавишу Enter: ");
+//         yourDay = int.Parse(Console.ReadLine()); // вводные данные
+//         a++;
+//     }
+// }
+
+// Вариант 2 ------------------------------------------------------------------------------
+
+// bool NumDay(int num)
+// {
+//     return (num == 6 | num ==7);
+// }
+
+// Console.Write("Введите число от 1 до 7: ");
+// for(int a = 1; a > 0; a++)
+// {
+//     int dayNum = int.Parse(Console.ReadLine());
+//     if(dayNum > 0 & dayNum < 8)
+//     {
+//        Console.WriteLine(NumDay(dayNum));
+//        break;
+//     }
+//     else
+//     {
+//         Console.WriteLine("Введите верное число");
+//     }
+// }
 
 // 17. =====По двум заданным числам проверять является ли одно квадратом другого
 
@@ -360,26 +497,92 @@
 // }
 // PrintFunc(ans);
 
+// Вариант 2 ------------------------------------------------------------
+
+// bool result(int a, int b)
+// {
+//     return (a == bb | b == aa);
+// }
+
+// Console.WriteLine(result(5, 25));
+
 
 // 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
 
-// bool Func18(bool x, bool y)
-// {
-//     bool output = false;
-//     if(!(x & y) == !x ^ !y)
-//     {
-//         output = true;
-//     }
-//     return output;
-// }
+bool Func18(bool x, bool y)
+{
+    bool output = false;
+    if(!(x & y) == !x ^ !y)
+    {
+        output = true;
+    }
+    return output;
+}
 
-// bool ans = Func18(false, false);
-// Console.WriteLine(ans);
+bool ans = Func18(false, false);
+Console.WriteLine(ans    );
 
 // 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 // 20. Ввести номер четверти, показать диапазоны для возможных координат
 // 21. Программа проверяет пятизначное число на палиндромом.
+
+// 12321 
+
+
+// int a = new Random().Next (10000,100000);
+
+// int firstNum = a / 10000; // 1
+// int secondNum = a /1000 % 10; // 2
+// int fourthNum = a % 100 / 10; // 2
+// int fifthNum = a % 10; // 1
+
+// if (firstNum == fifthNum & secondNum == fourthNum)
+// {
+//     System.Console.WriteLine($"Число {a} палиндром");
+// }
+// else
+// {
+//     System.Console.WriteLine($"Число {a} не палиндром");
+// }
+// System.Console.WriteLine();
+
+
+// bool IsPolindrome(int N)
+// {
+//     string C = Convert.ToString(N);
+//     int N1 = C[0];
+//     int N2 = C[1];
+//     int N3 = C[3];
+//     int N4 = C[4];
+//     if (N1 == N4 & N2 == N3)
+//     {
+//         return true;
+//     }
+//     else
+//     {
+//         return false;
+//     }
+// }
+
+// if (IsPolindrome(12321)) Console.WriteLine("Палиндром.");
+// else Console.WriteLine("Не палиндром.");
+
+
+
 // 22. Найти расстояние между точками в пространстве 2D/3D
+
+// double GetLengthBetween(double x1, double y1, double z1, double x2, double y2, double z2) // 22
+// {
+//     double x = Math.Abs(x1 - x2);
+//     double y = Math.Abs(y1 - y2);
+//     double z = Math.Abs(z1 - z2);
+//     double L = Math.Sqrt(x * x + y * y + z * z);
+//     return L;
+// }
+
+// double L = GetLengthBetween(0, 0, 0, 1, 2, 2);
+// Console.WriteLine(L);
+
 
 // Почувствуй себя мидлом
 // 23. Показать таблицу квадратов чисел от 1 до N 
