@@ -501,7 +501,7 @@
 
 // bool result(int a, int b)
 // {
-//     return (a == bb | b == aa);
+//     return (a == b*b | b == a*a);
 // }
 
 // Console.WriteLine(result(5, 25));

@@ -125,3 +125,18 @@
 //     i = first * last
 
 // }
+
+// 18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
+
+// bool Func18(bool x, bool y)
+// {
+//     return (!(x | y) == (!x & !y));
+// }
+// bool ans = Func18(false, false);
+// Console.WriteLine(ans);
+// ans = Func18(true, false);
+// Console.WriteLine(ans);
+// ans = Func18(false, true);
+// Console.WriteLine(ans);
+// ans = Func18(true, true);
+// Console.WriteLine(ans);
