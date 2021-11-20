@@ -1,6 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
 // Console.WriteLine("Hello, World!");
 
+ // Задача 30 Показать кубы чисел, заканчивающихся на четную цифру не дорешал 
+
+// int[] createArray(int size, int min, int max)
+// {
+//     int[] numbers = new int[size];
+//     for (int i = 0; i < numbers.Length; i++)
+//     {
+//         numbers[i] = new Random.Next(min, max);
+//     }
+//     return numbers;
+// }
+
+// int [] arr = createArray (10 ,5 ,16);
+
 // 31. Задать массив из 8 элементов и вывести их на экран 
 // 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран 
 // 33. Задать массив из 12 элементов, заполненных числами из [0,9]. Найти сумму положительных/отрицательных элементов массива
@@ -23,12 +37,15 @@
 
 // 1. Создать массив 2. Заполнить массив 3. Вычислить сумму чисел
 
-// int[] array = new int[10];
 
-// // int[] CreateArray(int len)
-// // {
-// //     return new int[len];
-// // } 
+
+// int[] CreateArray(int len)
+// {
+//     return new int[len];
+// } 
+
+
+// int[] array = new int[10];
 
 // int[] FillArray(int[] Arr) // метод а в круглых скобках тело метода
 // {
@@ -109,53 +126,53 @@
 
 // 40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом
 
-double[] array = new double[10];
+// double[] array = new double[10];
 
-double[] FillArray(double[] A)
-{
-    for (int i = 0; i < A.Length; i++)
-    {
-        A[i] = new Random().NextDouble() * 100;
-    }
-    return A;
-}
-array = FillArray(array);
+// double[] FillArray(double[] A)
+// {
+//     for (int i = 0; i < A.Length; i++)
+//     {
+//         A[i] = new Random().NextDouble() * 100;
+//     }
+//     return A;
+// }
+// array = FillArray(array);
 
-void PrintArray(double[] A)
-{
-    for (int i = 0; i < A.Length; i++)
-    {
-        System.Console.WriteLine(A[i]);
-    }
-}
-PrintArray(array);
+// void PrintArray(double[] A)
+// {
+//     for (int i = 0; i < A.Length; i++)
+//     {
+//         System.Console.WriteLine(A[i]);
+//     }
+// }
+// PrintArray(array);
 
-System.Console.WriteLine();
+// System.Console.WriteLine();
 
-double MinMax(double[] B)
-{
-    double Min = B[0];
-    double Max = B[0];
-    for (int i = 1; i < B.Length; i++)
-    {
-        if (Min > B[i]) // 5 = 2
-        {
-            Min = B[i];
-        
-        }
-        if (Max < B[i]) // 1 = 2
-        {
-            Max = B[i];
-        }
-        
-    }
-System.Console.WriteLine(Min + " Минимальное");
-System.Console.WriteLine(Max + " Максимальное");
-double result = Max-Min;
-return result;
-}
-// MinMax(array);
-double res = MinMax(array);
+// double MinMax(double[] B)
+// {
+//     double Min = B[0];
+//     double Max = B[0];
+//     for (int i = 1; i < B.Length; i++)
+//     {
+//         if (Min > B[i]) // 5 = 2
+//         {
+//             Min = B[i];
 
-System.Console.WriteLine(res + " Разница между максимальным и минимальным");
+//         }
+//         if (Max < B[i]) // 1 = 2
+//         {
+//             Max = B[i];
+//         }
+
+//     }
+//     System.Console.WriteLine(Min + " Минимальное");
+//     System.Console.WriteLine(Max + " Максимальное");
+//     double result = Max - Min;
+//     return result;
+// }
+// // MinMax(array);
+// double res = MinMax(array);
+
+// System.Console.WriteLine(res + " Разница между максимальным и минимальным");
 

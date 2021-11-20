@@ -698,9 +698,97 @@
 
 // Почувствуй себя лидом
 // 41. Выяснить являются ли три числа сторонами треугольника 
+
+// Вариант 1 __________________________________________
+// int a = 5;
+// int b = 5;
+// int c = 7;
+
+// if (a + b > c && b + c > a && a + c > b)
+// {
+//     System.Console.WriteLine("Это Треугольник");
+// }
+// else
+// {
+//     System.Console.WriteLine("Фигура не известна");
+// }
+
+// // System.Console.WriteLine(5 && 4);
+// System.Console.WriteLine();
+// System.Console.WriteLine(5 & 2);
+
+// Вариант 2 _____________________________
+
+// bool isTriangle (int x, int y, int z)
+// {
+//     if (x + y > z && z + y > x && x + z > y) return true;
+//     return false;
+// }
+// int a = 3;
+// int b = 1;
+// int c = 6;
+
+// if(isTriangle(a,b,c)) System.Console.WriteLine("Ок");
+// else System.Console.WriteLine("Не ОК");
+
 // 42. Определить сколько чисел больше 0 введено с клавиатуры
 // 43. Написать программу преобразования десятичного числа в двоичное
+
+// int ToBinary(int d) // Рассмотрим на примере d = 5
+// {
+//     int b = 0;
+//     int c = 1;
+//     while (d > 0)       // d = 5          d = 2        d = 1       d = 0
+//     {
+//         if (d % 2 == 1) // d%2 == 1       d%2 == 0     d%2 == 1
+//         {
+//             b = b + c;  // b = 1          -----        b = 101
+//         }
+//         d = d / 2;      // d = 2          d = 1        d = 0
+//         c = c * 10;     // c = 10         c = 100      c = 1000
+//     }
+//     return b; // b = 101
+// }
+
+// int d = 0;
+// int b = ToBinary(d);
+// System.Console.WriteLine(d);
+// System.Console.WriteLine(b);
+
 // 44. Найти точку пересечения двух прямых заданных уравнением y=kx+b, а1 k1 и а2 и k2 заданы
 // 45. Показать числа Фибоначчи
+
+// 0  1   1    2     3 5 8 13 ....
+// f  s (s+f)
+//    f   s   (s+f)
+//        f    s   (s+f)
+
+
+// int first = 0;
+// int second = 1;
+// int third = 1;
+// int n = 20;
+// for(int i = 0; i < n; i++) 
+// {
+//     third = second + first;
+//     first = second;
+//     second = third;
+//     System.Console.WriteLine(third);
+// }
+
+// // Вариант 2 _____________________________
+
+// int Fi(int n)
+// {
+//     if(n==0 || n==1)return n;
+//     return Fi(n-1) + Fi(n-2);
+// }
+// int fi1 = Fi(4);
+// int fi2 = Fi(5);
+// int fi3 = Fi(6);
+// Console.WriteLine($"4 число фибоначи = {fi1}");
+// Console.WriteLine($"5 число фибоначи = {fi2}");
+// Console.WriteLine($"6 число фибоначи = {fi3}");
+
 // 46. Написать программу масштабирования фигуры
 // 47. Написать программу копирования массива
